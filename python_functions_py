@@ -1,0 +1,99 @@
+
+#! python functions
+def myFunction():
+    print("Hello from a function!")
+myFunction()
+print("")
+
+
+
+##? Arguments
+def myFunction(fname):
+    print(fname + " Refsnes")
+
+myFunction("Emil")
+myFunction("Tobias")
+myFunction("Linus")
+print("")
+
+
+
+##? Arbitrary arguments *
+# If you do not know how many arguments that will be passed into your function, add a '*' before the parameter name in the function definition.
+def my_function(*kids):
+    print("The youngest child is " + kids[2])
+
+my_function("Emil", "Tobias", "Linus")
+
+
+
+##? keyword arguments -> key = value
+def my2Function(child3, child2, child1):
+    print("The youngest child is " + child3)
+
+my2Function(child1="Emil", child2="Tobias", child3="Linus")
+print("")
+
+
+
+##? arbitrary keywrd arguments **
+# If you do not know how many keyword arguments that will be passed into your function, add two asterix: ** before the parameter name in the function definition.
+def my3Function(**kid):
+    print("His last name is " + kid["lname"])
+
+my3Function(fname="Tobias", lname="Refsnes")
+print("")
+
+
+
+##? Default parameter value
+def my4Function(country = "Norway"):
+    print("I am from " + country)
+
+my4Function("Sweden")
+my4Function()
+my4Function("Brazil")
+print("")
+
+
+##? passing a LIST as an argument
+def my5Function(food):
+    for x in food:
+        print(x)
+    
+fruits = ["apple", "banana", "cherry"]
+my5Function(fruits)
+print("")
+
+
+
+##? return values
+def my6Function(x):
+    return 5*x # it returns value
+
+print(my6Function(3))
+print(my6Function(5))
+print(my6Function(39))
+print("")
+
+
+
+##? pass -> makes empty function to avoid getting an error
+def blankFunction():
+    pass
+
+
+
+##? recursion
+# Python also accepts function recursion, which means a defined function can call itself.
+def tri_recursion(k):
+    if(k>0):
+        result = k+tri_recursion(k-1)
+        print(result)
+    else:
+        result = 0
+    return result
+
+print("\n\n Recursion Example Results")
+tri_recursion(6)
+print("")
