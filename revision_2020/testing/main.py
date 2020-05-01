@@ -47,3 +47,80 @@ for eachMovie in movies:
 # 1983
 
 #! Nested lists
+movies2 = ["The Holy Grail", 1975, "The Life of Brian", 1979,
+["Graham Champman",["Michael Palin", "John Cleese", "Terry Gilliam", "Eric Idle"]]]
+
+print(movies2[4][1][3]) # OUTPUT: Eric Idle
+
+print("")
+print("")
+
+for allahuAkbar in movies2:
+    print(allahuAkbar)
+
+# OUTPUT: 
+# The Holy Grail
+# 1975
+# The Life of Brian
+# 1979
+# ['Graham Champman', ['Michael Palin', 'John Cleese', 'Terry Gilliam', 'Eric Idle']]
+
+print("")
+print("")
+
+#---------------------------------------------------
+#! isinstance() -> it lets you check if a
+#! specific identifier holds data of a specific type
+
+names = ["Michael", "Amanda", "Trevor"]
+#? Ask if “names” is a list (it is).
+print(isinstance(names, list)) # OUTPUT:True
+
+num_names = len(names)
+#? Ask if “num_names” is a list (it isn’t).
+print(isinstance(num_names, list)) # OUTPUT: False
+
+print("")
+print("")
+
+#------------------------------------------------
+#! Nested lists
+for each_item in movies2:
+    if isinstance(each_item, list):
+        for nested_item in each_item:
+            print(nested_item)
+    else:
+        print(each_item)
+
+# OUTPUT:
+# The Holy Grail
+# 1975
+# The Life of Brian
+# 1979
+# Graham Champman # This is a little better, but not by much…there’s another nested list here that’s not being processed properly.
+# ['Michael Palin', 'John Cleese', 'Terry Gilliam', 'Eric Idle']
+
+print("")
+print("")
+
+for each_item in movies2:
+    if isinstance(each_item, list):
+        for nested_item in each_item:
+            if isinstance(nested_item, list):
+                for deeper_item in nested_item:
+                    print(deeper_item)
+            else:
+             print(nested_item)
+    else:
+        print(each_item)
+
+# OUTPUT: 
+# The Holy Grail
+# 1975
+# The Life of Brian
+# 1979
+# Graham Champman
+# Michael Palin
+# John Cleese
+# Terry Gilliam
+# Eric Idle
