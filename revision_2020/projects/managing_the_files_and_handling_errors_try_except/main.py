@@ -36,7 +36,7 @@ if os.path.exists(file_path):
             print(role, end='')
             print(' said: ', end='')
             print(line_spoken, end='')
-        except:
+        except ValueError:
             pass
 
     """ OUTPUT: 
