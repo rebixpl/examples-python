@@ -30,7 +30,7 @@ if os.path.exists(file_path):
             """
             The split() method returns a list of strings, which are assigned to a list of
             target identifiers. This is known as multiple assignment:
-        """
+            """
             (role, line_spoken) = each_line.split(
                 ':', 1)  # The extra argument controls how “split()” splits. ( in how many parts it splits )
             print(role, end='')
