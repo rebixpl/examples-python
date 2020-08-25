@@ -41,3 +41,49 @@ y = "big deadly robot"
 o = "deathbringer"
 z = y + o
 print(z)  # OUTPUT: big deadly robot deathbringer
+
+
+##################################################################
+
+
+# Global variables can be used by everyone, both inside of functions and outside.
+username = "Ahmed"  # this is global variable
+
+
+def myFunc():
+    print("welcome, " + username)
+
+
+myFunc()
+
+
+# If you create a variable with the same name inside a function, this variable will be local,
+# and can only be used inside the function.
+x = "water"
+
+
+def mySecFunc():
+    x = "human meat"
+    print("Eat " + x)  # OUTPUT: Eat human meat
+
+
+mySecFunc()
+
+print("Eat " + x)  # OUTPUT: Eat water
+
+
+##################################################################
+
+
+# To create a global variable inside a function, you can use the global keyword.
+x = "smoke weed"
+
+
+def myfFfFunc():
+    global x
+    x = "uproot weed"
+
+
+myfFfFunc()
+
+print(x)  # OUTPUT: uproot weed
