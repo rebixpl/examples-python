@@ -110,15 +110,27 @@ for x in [0, 1, 2]:
 # numbers up to 
 # sum = 1+2+3+...+n
 
-n = int(input("Enter n: "))
-sum = 0
-counter = 1
+# n = int(input("Enter n: "))
+# sum = 0
+# counter = 1
 
-while counter <= n:
-    sum  += counter
-    counter += 1
-    print(sum)
-else:
-    print("while loop has ended")
+# while counter <= n:
+#     sum  += counter
+#     counter += 1
+#     print(sum)
+# else:
+#     print("while loop has ended")
     
-print("The sum is", sum)
+# print("The sum is", sum)
+
+def factorial(x):
+    """This is a recursive function
+    to find the factorial of an integer"""
+    
+    if x == 1:
+        return 1
+    else:
+        return (x * factorial(x-1))
+    
+num = int(input("Enter number: "))
+print("The factorial of", num, "is", factorial(num))
