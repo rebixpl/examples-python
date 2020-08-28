@@ -105,3 +105,20 @@ for x in adj:
 # The pass statement
 for x in [0, 1, 2]:
     pass
+
+# Program to add natural
+# numbers up to 
+# sum = 1+2+3+...+n
+
+n = int(input("Enter n: "))
+sum = 0
+counter = 1
+
+while counter <= n:
+    sum  += counter
+    counter += 1
+    print(sum)
+else:
+    print("while loop has ended")
+    
+print("The sum is", sum)
