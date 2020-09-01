@@ -19,3 +19,6 @@ print(dir(example))
 # For example, the __name__ attribute contains the name of the module.
 
 print(example.__name__)
+
+odd_squares = {x: x*x for x in range(10000) if x%2 == 1}
+print(odd_squares)
